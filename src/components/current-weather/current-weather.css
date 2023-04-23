@@ -1,0 +1,97 @@
+.weather {
+  width: 300px;
+  border-radius: 6px;
+  box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  background-color: #333;
+  margin: 20px auto 0 auto;
+  padding: 5px 20px 20px 20px;
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.weather-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+}
+
+.weather-icon {
+  width: 100px;
+}
+
+.temp {
+  font-weight: 600;
+  font-size: 70px;
+  width: auto;
+  margin: 10px 0;
+  letter-spacing: -5px;
+}
+
+.details {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.title {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.parameter-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parameter-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.parameter-value {
+  text-align: right;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.daily-details-grid {
+  display: grid;
+  flex: 1 1;
+  column-gap: 100px;
+  grid-template-columns: auto auto;
+  padding: 5px 20px;
+  row-gap: 0;
+}
+
+.daily-details-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.daily-details-grid-item label:first-child {
+color: #757575;
+}
+
+.daily-details-grid-item label:last-child {
+  color: #212121;
+}
