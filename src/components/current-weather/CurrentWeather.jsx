@@ -10,7 +10,7 @@ function CurrentWeather({data}) {
         </div>
 
         <img
-          src="icons/01d.png"
+          src={`icons/${data.weather[0].icon}.png`}
           alt="weather"
           className="weather-icon"
         />
