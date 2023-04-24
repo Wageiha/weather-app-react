@@ -4,14 +4,14 @@ import { geoApiOptions, geoApiUrl } from "./api";
 
 function Search({ onSearchChange }) {
   const [search, setSearch] = useState(null);
-console.log("line7",search);
+
   const handleOnChange = (searchData) => {
     setSearch(searchData);
     onSearchChange(searchData);
   };
 
   const loadOptions = (inputValue) => {
-    console.log(inputValue);
+   
     return fetch(
       `${geoApiUrl}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
       geoApiOptions
@@ -29,7 +29,6 @@ console.log("line7",search);
       })
       .catch((err) => console.error("Geo Fetch Error",err));
   };
-console.log("line31",search);
 
   return (
     <AsyncPaginate

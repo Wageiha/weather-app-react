@@ -22,7 +22,7 @@ function Forecast({ data }) {
   const forecastDays = weekDays
     .slice(currentDay, weekDays.length)
     .concat(weekDays.slice(0, currentDay));
-  console.log(forecastDays);
+ 
   return (
     <div>
       <label className="forecast-title">Daily</label>

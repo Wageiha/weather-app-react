@@ -1,5 +1,5 @@
 .weather {
-  width: 300px;
+  width: 400px;
   border-radius: 6px;
   box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
   color: #fff;
@@ -13,13 +13,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 .city {
   font-weight: 600;
   font-size: 18px;
   line-height: 1;
-  margin: 0;
+  margin: 0px;
   letter-spacing: 1px;
 }
 
@@ -36,7 +37,7 @@
 
 .temp {
   font-weight: 600;
-  font-size: 70px;
+  font-size: 60px;
   width: auto;
   margin: 10px 0;
   letter-spacing: -5px;
@@ -44,7 +45,7 @@
 
 .details {
   width: 100%;
-  padding-left: 20px;
+  padding-left: 80px;
 }
 
 .title {
@@ -72,26 +73,4 @@
   font-size: 12px;
 }
 
-.daily-details-grid {
-  display: grid;
-  flex: 1 1;
-  column-gap: 100px;
-  grid-template-columns: auto auto;
-  padding: 5px 20px;
-  row-gap: 0;
-}
 
-.daily-details-grid-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 30px;
-}
-
-.daily-details-grid-item label:first-child {
-color: #757575;
-}
-
-.daily-details-grid-item label:last-child {
-  color: #212121;
-}

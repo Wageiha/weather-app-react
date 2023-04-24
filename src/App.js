@@ -6,9 +6,8 @@ import { useState } from "react";
 import Forecast from "./components/forecast/Forecast";
 
 function App() {
-const [currentWeather, setCurrentWeather] = useState(null);
-const [forecast, setForecast] = useState(null);
-
+  const [currentWeather, setCurrentWeather] = useState(null);
+  const [forecast, setForecast] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
     const [latitude, longitude] = searchData.value.split(" ");
@@ -22,27 +21,23 @@ const [forecast, setForecast] = useState(null);
     );
 
     Promise.all([currentWeatherFetch, forecastFetch])
-    .then(async response => {
-      const weatherResponse = await response[0].json();
-      const forecastResponse = await response[1].json();
+      .then(async (response) => {
+        const weatherResponse = await response[0].json();
+        const forecastResponse = await response[1].json();
 
-      setCurrentWeather({city: searchData.label, ...weatherResponse});
-      setForecast({city: searchData.label, ...forecastResponse});
-    })
-    .catch((err) => console.error("Weather Fetch Error",err));
+        setCurrentWeather({ city: searchData.label, ...weatherResponse });
+        setForecast({ city: searchData.label, ...forecastResponse });
+      })
+      .catch((err) => console.error("Weather Fetch Error", err));
   };
 
-  console.log("current weather",currentWeather);
-  console.log("forecast",forecast);
-
-  return (
+     return (
     <div className="container">
-      <Search onSearchChange={handleOnSearchChange} />
-      {currentWeather && <CurrentWeather data = {currentWeather}/>}
-      {forecast && <Forecast data = {forecast}/>}
+           <Search onSearchChange={handleOnSearchChange} />
+      {currentWeather && <CurrentWeather data={currentWeather} />}
+      {forecast && <Forecast data={forecast} />}
     </div>
   );
 }
 
 export default App;
-

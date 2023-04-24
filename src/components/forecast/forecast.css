@@ -31,8 +31,37 @@
     flex: 1 1;
     margin-right: 15px;
     text-align: right;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .day-min-max {
-   color: #757575; 
+   color: #5e5a5a; 
+   font-weight: 600;
 }
+
+.daily-details-grid {
+    display: grid;
+    flex: 1 1;
+    column-gap: 100px;
+    grid-template-columns: auto auto;
+    padding: 5px 20px;
+    row-gap: 0;
+  }
+  
+  .daily-details-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+  }
+  
+  .daily-details-grid-item label:first-child {
+  color: white;
+  font-weight: 600;
+  }
+  
+  .daily-details-grid-item label:last-child {
+    color: #212121;
+    font-weight: 600;
+  }
