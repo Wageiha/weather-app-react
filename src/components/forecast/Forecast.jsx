@@ -25,7 +25,7 @@ function Forecast({ data }) {
  
   return (
     <div>
-      <label className="forecast-title">Daily</label>
+      <label className="forecast-title">DAILY FORECAST</label>
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
